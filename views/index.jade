@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  .outerDiv
+      form(method='post', action='/',enctype='multipart/form-data')
+        .form-row
+          .form-group.col-md-6
+            label(for='inputCountry4') Country
+            input#inputEmail4.form-control(type='text', placeholder='Nepal', name='country')
+          .form-group.col-md-6
+            label(for='inputCity4') City
+            input#inputCity4.form-control(type='text', placeholder='Kathmandu', name='city')
+        .form-group
+          label(for='inputPickUpDate') Pick Up Date
+          input#inputPickUpDate.form-control(type='date', placeholder='11/14/2019', name='pickup')
+        .form-group
+          label(for='inputDropUpDate') Drop Off Date
+          input#inputDropUpDate.form-control(type='date', placeholder='13/14/2019',name='dropoff')
+        .form-row
+          .form-group.col-md-6
+            label(for='inputFullName') Full Name
+            input#inputFullName.form-control(type='text', name='fullname')
+          .form-group.col-md-4
+            label(for='inputState') Vehicle Needed
+            select#inputState.form-control(name='vehicleneeded')
+              option(selected='') Bicycle
+              option Scooter
+              option Bike
+              option Car
+              option E-Vehicles
+          .form-group.col-md-2
+            label(for='inputZip') Zip
+            input#inputZip.form-control(type='text')
+        .form-group
+          .form-check
+            input#gridCheck.form-check-input(type='checkbox')
+            label.form-check-label(for='gridCheck')
+              | Check me out
+        button.btn.btn-primary(type='submit') Find Vehicles
+
